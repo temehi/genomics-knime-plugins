@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool name="Seqcons" version="0.23.4 [ff0da13]" docurl="http://www.seqan.de" category="Sequence Alignment" >
+	<executableName>seqcons</executableName>
+	<description>Multi-read alignment.</description>
+	<manual>(c) Copyright 2009 by Tobias Rausch
+</manual>
+	<cli>
+		<clielement optionIdentifier="--write-ctd-file-ext" isList="false">
+			<mapping referenceName="seqcons.write-ctd-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--reads" isList="false">
+			<mapping referenceName="seqcons.reads" />
+		</clielement>
+		<clielement optionIdentifier="--reads-file-ext" isList="false">
+			<mapping referenceName="seqcons.reads-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--afg" isList="false">
+			<mapping referenceName="seqcons.afg" />
+		</clielement>
+		<clielement optionIdentifier="--afg-file-ext" isList="false">
+			<mapping referenceName="seqcons.afg-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--sam" isList="false">
+			<mapping referenceName="seqcons.sam" />
+		</clielement>
+		<clielement optionIdentifier="--sam-file-ext" isList="false">
+			<mapping referenceName="seqcons.sam-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--contigs" isList="false">
+			<mapping referenceName="seqcons.contigs" />
+		</clielement>
+		<clielement optionIdentifier="--contigs-file-ext" isList="false">
+			<mapping referenceName="seqcons.contigs-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--outfile" isList="false">
+			<mapping referenceName="seqcons.outfile" />
+		</clielement>
+		<clielement optionIdentifier="--outfile-file-ext" isList="false">
+			<mapping referenceName="seqcons.outfile-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--method" isList="true">
+			<mapping referenceName="seqcons.method" />
+		</clielement>
+		<clielement optionIdentifier="--bandwidth" isList="false">
+			<mapping referenceName="seqcons.bandwidth" />
+		</clielement>
+		<clielement optionIdentifier="--noalign" isList="false">
+			<mapping referenceName="seqcons.noalign" />
+		</clielement>
+		<clielement optionIdentifier="--matchlength" isList="false">
+			<mapping referenceName="seqcons.matchlength" />
+		</clielement>
+		<clielement optionIdentifier="--quality" isList="false">
+			<mapping referenceName="seqcons.quality" />
+		</clielement>
+		<clielement optionIdentifier="--overlaps" isList="false">
+			<mapping referenceName="seqcons.overlaps" />
+		</clielement>
+		<clielement optionIdentifier="--window" isList="false">
+			<mapping referenceName="seqcons.window" />
+		</clielement>
+		<clielement optionIdentifier="--include" isList="false">
+			<mapping referenceName="seqcons.include" />
+		</clielement>
+		<clielement optionIdentifier="--rmethod" isList="false">
+			<mapping referenceName="seqcons.rmethod" />
+		</clielement>
+	</cli>
+	<PARAMETERS version="1.6.2" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_6_2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="seqcons" description="Multi-read alignment.">
+			<ITEM name="write-ctd-file-ext" value="" type="string" description="Override file extension for --write-ctd" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="reads" value="" type="input-file" description="file with reads" supported_formats="*.fa,*.fasta" required="false" advanced="false" />
+			<ITEM name="reads-file-ext" value="" type="string" description="Override file extension for --reads" restrictions="fa,fasta" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="afg" value="" type="input-file" description="message file" supported_formats="*.afg" required="false" advanced="false" />
+			<ITEM name="afg-file-ext" value="" type="string" description="Override file extension for --afg" restrictions="afg" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="sam" value="" type="input-file" description="Sam file" supported_formats="*.sam" required="false" advanced="false" />
+			<ITEM name="sam-file-ext" value="" type="string" description="Override file extension for --sam" restrictions="sam" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="contigs" value="" type="input-file" description="FASTA file with contigs, ignored if not Sam input" supported_formats="*.fa,*.fasta" required="false" advanced="false" />
+			<ITEM name="contigs-file-ext" value="" type="string" description="Override file extension for --contigs" restrictions="fa,fasta" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="outfile" value="align.sam" type="output-file" description="output filename" supported_formats="*.afg,*.seqan,*.cgb,*.sam" required="false" advanced="false" />
+			<ITEM name="outfile-file-ext" value="" type="string" description="Override file extension for --outfile" restrictions="afg,seqan,cgb,sam" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEMLIST name="method" type="string" description="alignment method" required="false" advanced="false" >
+				<LISTITEM value="realign"/>
+			</ITEMLIST>
+			<ITEM name="bandwidth" value="8" type="int" description="bandwidth" required="false" advanced="false" />
+			<ITEM name="noalign" value="false" type="string" description="no align, only convert input" restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="matchlength" value="15" type="int" description="min. overlap length" required="false" advanced="false" />
+			<ITEM name="quality" value="80" type="int" description="min. overlap precent identity" required="false" advanced="false" />
+			<ITEM name="overlaps" value="3" type="int" description="min. number of overlaps per read" required="false" advanced="false" />
+			<ITEM name="window" value="0" type="int" description="The window size.  If this parameter is greater than 0 then all overlaps within a given window are computed." required="false" advanced="false" />
+			<ITEM name="include" value="false" type="string" description="include contig sequence" restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="rmethod" value="gotoh" type="string" description="realign method" required="false" advanced="false" />
+		</NODE>
+	</PARAMETERS>
+</tool>

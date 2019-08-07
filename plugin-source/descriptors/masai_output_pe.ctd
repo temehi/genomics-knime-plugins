@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool name="MasaiOutputPe" version="0.7.2 [394776e]" docurl="http://www.seqan.de" category="Read Mapping" >
+	<executableName>masai_output_pe</executableName>
+	<description>Masai Output - Paired End Mode</description>
+	<manual>Masai is a fast and accurate read mapper based on approximate seeds and multiple backtracking.
+See http://www.seqan.de/projects/masai for more information.
+(c) Copyright 2011-2012 by Enrico Siragusa.
+</manual>
+	<cli>
+		<clielement optionIdentifier="--write-ctd-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.write-ctd-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-1-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.arg-1-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-2-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.arg-2-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-3-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.arg-3-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-4-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.arg-4-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-5-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.arg-5-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--no-gaps" isList="false">
+			<mapping referenceName="masai_output_pe.no-gaps" />
+		</clielement>
+		<clielement optionIdentifier="--library-length" isList="false">
+			<mapping referenceName="masai_output_pe.library-length" />
+		</clielement>
+		<clielement optionIdentifier="--library-error" isList="false">
+			<mapping referenceName="masai_output_pe.library-error" />
+		</clielement>
+		<clielement optionIdentifier="--tmp-folder" isList="false">
+			<mapping referenceName="masai_output_pe.tmp-folder" />
+		</clielement>
+		<clielement optionIdentifier="--output-file" isList="false">
+			<mapping referenceName="masai_output_pe.output-file" />
+		</clielement>
+		<clielement optionIdentifier="--output-file-file-ext" isList="false">
+			<mapping referenceName="masai_output_pe.output-file-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--no-cigar" isList="false">
+			<mapping referenceName="masai_output_pe.no-cigar" />
+		</clielement>
+		<clielement optionIdentifier="--no-dump" isList="false">
+			<mapping referenceName="masai_output_pe.no-dump" />
+		</clielement>
+		<!-- Following clielements are arguments. You should consider providing a help text to ease understanding. -->
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="masai_output_pe.argument-0" />
+		</clielement>
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="masai_output_pe.argument-1" />
+		</clielement>
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="masai_output_pe.argument-2" />
+		</clielement>
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="masai_output_pe.argument-3" />
+		</clielement>
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="masai_output_pe.argument-4" />
+		</clielement>
+	</cli>
+	<PARAMETERS version="1.6.2" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_6_2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="masai_output_pe" description="Masai Output - Paired End Mode">
+			<ITEM name="write-ctd-file-ext" value="" type="string" description="Override file extension for --write-ctd" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-1-file-ext" value="" type="string" description="Override file extension for argument 1" restrictions="fasta,fa" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-2-file-ext" value="" type="string" description="Override file extension for argument 2" restrictions="fastq,fasta,fa" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-3-file-ext" value="" type="string" description="Override file extension for argument 3" restrictions="fastq,fasta,fa" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-4-file-ext" value="" type="string" description="Override file extension for argument 4" restrictions="raw" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-5-file-ext" value="" type="string" description="Override file extension for argument 5" restrictions="raw" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="no-gaps" value="false" type="string" description="Do not align reads with gaps." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="library-length" value="220" type="int" description="Library length." required="false" advanced="false" />
+			<ITEM name="library-error" value="50" type="int" description="Library length tolerance." required="false" advanced="false" />
+			<ITEM name="tmp-folder" value="" type="string" description="Specify a huge temporary folder.                                      Default: use the genome folder." required="false" advanced="false" />
+			<ITEM name="output-file" value="" type="output-file" description="Specify an output file.                                      Default: use the reads filename prefix." supported_formats="*.raw,*.sam" required="false" advanced="false" />
+			<ITEM name="output-file-file-ext" value="" type="string" description="Override file extension for --output-file" restrictions="raw,sam" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="no-cigar" value="false" type="string" description="Do not output CIGAR string. This only affects SAM output." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="no-dump" value="false" type="string" description="Do not dump results." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="argument-0" value="" type="input-file" description="" supported_formats="*.fasta,*.fa" required="true" advanced="false" />
+			<ITEM name="argument-1" value="" type="input-file" description="" supported_formats="*.fastq,*.fasta,*.fa" required="true" advanced="false" />
+			<ITEM name="argument-2" value="" type="input-file" description="" supported_formats="*.fastq,*.fasta,*.fa" required="true" advanced="false" />
+			<ITEM name="argument-3" value="" type="input-file" description="" supported_formats="*.raw" required="true" advanced="false" />
+			<ITEM name="argument-4" value="" type="input-file" description="" supported_formats="*.raw" required="true" advanced="false" />
+		</NODE>
+	</PARAMETERS>
+</tool>

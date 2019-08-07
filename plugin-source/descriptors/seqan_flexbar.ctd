@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool name="SeqanFlexbar" version="1.0.4 [ff0da13]" docurl="http://www.seqan.de" category="NGS Quality Control" >
+	<executableName>seqan_flexbar</executableName>
+	<description>The SeqAn NGS-Data Processing Toolkit</description>
+	<manual>SeqAn-Flexbar is a toolkit for the processing of sequenced NGS reads and based on the original Flexbar implementation of Dodt [1]. It is possible to demultiplex the reads and order them according to different kind of barcodes, to remove adapter contamination from reads, to trim low quality bases, filter N&apos;s or trim whole reads. The different tools are controlled through command line parameters and can operate on both single- and paired-end read data.
+[1] Dodt, M.; Roehr, J.T.; Ahmed, R.; Dieterich, C.  FLEXBAR—Flexible Barcode and Adapter Processing for Next-Generation Sequencing Platforms. Biology 2012, 1, 895-905.
+(c) Copyright 2008-2013 by Sebastian Roskosch.
+</manual>
+	<cli>
+		<clielement optionIdentifier="--write-ctd-file-ext" isList="false">
+			<mapping referenceName="seqan_flexbar.write-ctd-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-1-file-ext" isList="true">
+			<mapping referenceName="seqan_flexbar.arg-1-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--records" isList="false">
+			<mapping referenceName="seqan_flexbar.records" />
+		</clielement>
+		<clielement optionIdentifier="--noQualities" isList="false">
+			<mapping referenceName="seqan_flexbar.noQualities" />
+		</clielement>
+		<clielement optionIdentifier="--threads" isList="false">
+			<mapping referenceName="seqan_flexbar.threads" />
+		</clielement>
+		<clielement optionIdentifier="--output" isList="false">
+			<mapping referenceName="seqan_flexbar.output" />
+		</clielement>
+		<clielement optionIdentifier="--tag" isList="false">
+			<mapping referenceName="seqan_flexbar.tag" />
+		</clielement>
+		<clielement optionIdentifier="--noInfo" isList="false">
+			<mapping referenceName="seqan_flexbar.noInfo" />
+		</clielement>
+		<clielement optionIdentifier="--trimLeft" isList="false">
+			<mapping referenceName="seqan_flexbar.trimLeft" />
+		</clielement>
+		<clielement optionIdentifier="--trimRight" isList="false">
+			<mapping referenceName="seqan_flexbar.trimRight" />
+		</clielement>
+		<clielement optionIdentifier="--minLength" isList="false">
+			<mapping referenceName="seqan_flexbar.minLength" />
+		</clielement>
+		<clielement optionIdentifier="--uncalled" isList="false">
+			<mapping referenceName="seqan_flexbar.uncalled" />
+		</clielement>
+		<clielement optionIdentifier="--substitute" isList="false">
+			<mapping referenceName="seqan_flexbar.substitute" />
+		</clielement>
+		<clielement optionIdentifier="--finalMinLength" isList="false">
+			<mapping referenceName="seqan_flexbar.finalMinLength" />
+		</clielement>
+		<clielement optionIdentifier="--finalLength" isList="false">
+			<mapping referenceName="seqan_flexbar.finalLength" />
+		</clielement>
+		<clielement optionIdentifier="--barcodes" isList="false">
+			<mapping referenceName="seqan_flexbar.barcodes" />
+		</clielement>
+		<clielement optionIdentifier="--barcodes-file-ext" isList="false">
+			<mapping referenceName="seqan_flexbar.barcodes-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--multiplex" isList="false">
+			<mapping referenceName="seqan_flexbar.multiplex" />
+		</clielement>
+		<clielement optionIdentifier="--multiplex-file-ext" isList="false">
+			<mapping referenceName="seqan_flexbar.multiplex-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--approximate" isList="false">
+			<mapping referenceName="seqan_flexbar.approximate" />
+		</clielement>
+		<clielement optionIdentifier="--hardClip" isList="false">
+			<mapping referenceName="seqan_flexbar.hardClip" />
+		</clielement>
+		<clielement optionIdentifier="--exclude" isList="false">
+			<mapping referenceName="seqan_flexbar.exclude" />
+		</clielement>
+		<clielement optionIdentifier="--adapters" isList="false">
+			<mapping referenceName="seqan_flexbar.adapters" />
+		</clielement>
+		<clielement optionIdentifier="--adapters-file-ext" isList="false">
+			<mapping referenceName="seqan_flexbar.adapters-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--no-adapter" isList="false">
+			<mapping referenceName="seqan_flexbar.no-adapter" />
+		</clielement>
+		<clielement optionIdentifier="--no-paired" isList="false">
+			<mapping referenceName="seqan_flexbar.no-paired" />
+		</clielement>
+		<clielement optionIdentifier="--errors" isList="false">
+			<mapping referenceName="seqan_flexbar.errors" />
+		</clielement>
+		<clielement optionIdentifier="--overlap" isList="false">
+			<mapping referenceName="seqan_flexbar.overlap" />
+		</clielement>
+		<clielement optionIdentifier="--quality" isList="false">
+			<mapping referenceName="seqan_flexbar.quality" />
+		</clielement>
+		<clielement optionIdentifier="--length" isList="false">
+			<mapping referenceName="seqan_flexbar.length" />
+		</clielement>
+		<clielement optionIdentifier="--method" isList="false">
+			<mapping referenceName="seqan_flexbar.method" />
+		</clielement>
+		<!-- Following clielements are arguments. You should consider providing a help text to ease understanding. -->
+		<clielement optionIdentifier="" isList="true">
+			<mapping referenceName="seqan_flexbar.argument-0" />
+		</clielement>
+	</cli>
+	<PARAMETERS version="1.6.2" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_6_2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="seqan_flexbar" description="The SeqAn NGS-Data Processing Toolkit">
+			<ITEM name="write-ctd-file-ext" value="" type="string" description="Override file extension for --write-ctd" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEMLIST name="arg-1-file-ext" type="string" description="Override file extension for argument 1" restrictions="fq,fq.bgzf,fq.gz,fq.bz2,fastq,fastq.bgzf,fastq.gz,fastq.bz2,fa,fa.bgzf,fa.gz,fa.bz2,fasta,fasta.bgzf,fasta.gz,fasta.bz2,faa,faa.bgzf,faa.gz,faa.bz2,ffn,ffn.bgzf,ffn.gz,ffn.bz2,fna,fna.bgzf,fna.gz,fna.bz2,frn,frn.bgzf,frn.gz,frn.bz2,embl,embl.bgzf,embl.gz,embl.bz2,gbk,gbk.bgzf,gbk.gz,gbk.bz2,raw,raw.bgzf,raw.gz,raw.bz2" required="false" advanced="true" tags="file-ext-override,gkn-ignore" >
+			</ITEMLIST>
+			<ITEM name="records" value="10000" type="int" description="Number of records to be read in one run." restrictions="10:" required="false" advanced="false" />
+			<ITEM name="noQualities" value="false" type="string" description="Force .fa format for output files." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="threads" value="1" type="int" description="Number of threads used." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="output" value="" type="output-prefix" description="Prefix and file ending of output files (prefix$.fa - $: placeholder which will be determined by the program.)." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fq.bz2,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fastq.bz2,*.fa,*.fa.bgzf,*.fa.gz,*.fa.bz2,*.fasta,*.fasta.bgzf,*.fasta.gz,*.fasta.bz2,*.faa,*.faa.bgzf,*.faa.gz,*.faa.bz2,*.ffn,*.ffn.bgzf,*.ffn.gz,*.ffn.bz2,*.fna,*.fna.bgzf,*.fna.gz,*.fna.bz2,*.frn,*.frn.bgzf,*.frn.gz,*.frn.bz2,*.raw,*.raw.bgzf,*.raw.gz,*.raw.bz2" required="false" advanced="false" />
+			<ITEM name="tag" value="false" type="string" description="Tags IDs of sequences which had adapters removed and/or were quality-trimmed." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="noInfo" value="false" type="string" description="Don&apos;t print paramter overwiev to console." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="trimLeft" value="0" type="int" description="Number of Bases to be trimmed from the 5&apos;end(s) before further processing." restrictions="0:" required="false" advanced="false" />
+			<ITEM name="trimRight" value="0" type="int" description="Number of Bases to be trimmed from the 3&apos;end(s) before further processing." restrictions="0:" required="false" advanced="false" />
+			<ITEM name="minLength" value="0" type="int" description="Required minimal length of reads after all PREprocessing steps." restrictions="0:" required="false" advanced="false" />
+			<ITEM name="uncalled" value="0" type="int" description="Number of allowed uncalled bases per sequence." restrictions="0:" required="false" advanced="false" />
+			<ITEM name="substitute" value="A" type="string" description="Substitue Dna-character for N&apos;s." restrictions="A,C,G,T" required="false" advanced="false" />
+			<ITEM name="finalMinLength" value="" type="int" description="Deletes read (and mate) if on of them is shorter than the given value after the complete worflow." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="finalLength" value="0" type="int" description="Trims reads to desired length after the complete workflow." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="barcodes" value="" type="input-file" description="FastA file containing the used barcodes and their IDs. Necessary for demutiplexing." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fq.bz2,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fastq.bz2,*.fa,*.fa.bgzf,*.fa.gz,*.fa.bz2,*.fasta,*.fasta.bgzf,*.fasta.gz,*.fasta.bz2,*.faa,*.faa.bgzf,*.faa.gz,*.faa.bz2,*.ffn,*.ffn.bgzf,*.ffn.gz,*.ffn.bz2,*.fna,*.fna.bgzf,*.fna.gz,*.fna.bz2,*.frn,*.frn.bgzf,*.frn.gz,*.frn.bz2,*.embl,*.embl.bgzf,*.embl.gz,*.embl.bz2,*.gbk,*.gbk.bgzf,*.gbk.gz,*.gbk.bz2,*.raw,*.raw.bgzf,*.raw.gz,*.raw.bz2" required="false" advanced="false" />
+			<ITEM name="barcodes-file-ext" value="" type="string" description="Override file extension for --barcodes" restrictions="fq,fq.bgzf,fq.gz,fq.bz2,fastq,fastq.bgzf,fastq.gz,fastq.bz2,fa,fa.bgzf,fa.gz,fa.bz2,fasta,fasta.bgzf,fasta.gz,fasta.bz2,faa,faa.bgzf,faa.gz,faa.bz2,ffn,ffn.bgzf,ffn.gz,ffn.bz2,fna,fna.bgzf,fna.gz,fna.bz2,frn,frn.bgzf,frn.gz,frn.bz2,embl,embl.bgzf,embl.gz,embl.bz2,gbk,gbk.bgzf,gbk.gz,gbk.bz2,raw,raw.bgzf,raw.gz,raw.bz2" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="multiplex" value="" type="input-file" description="FastA/FastQ file containing the barcode for each read." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fq.bz2,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fastq.bz2,*.fa,*.fa.bgzf,*.fa.gz,*.fa.bz2,*.fasta,*.fasta.bgzf,*.fasta.gz,*.fasta.bz2,*.faa,*.faa.bgzf,*.faa.gz,*.faa.bz2,*.ffn,*.ffn.bgzf,*.ffn.gz,*.ffn.bz2,*.fna,*.fna.bgzf,*.fna.gz,*.fna.bz2,*.frn,*.frn.bgzf,*.frn.gz,*.frn.bz2,*.embl,*.embl.bgzf,*.embl.gz,*.embl.bz2,*.gbk,*.gbk.bgzf,*.gbk.gz,*.gbk.bz2,*.raw,*.raw.bgzf,*.raw.gz,*.raw.bz2" required="false" advanced="false" />
+			<ITEM name="multiplex-file-ext" value="" type="string" description="Override file extension for --multiplex" restrictions="fq,fq.bgzf,fq.gz,fq.bz2,fastq,fastq.bgzf,fastq.gz,fastq.bz2,fa,fa.bgzf,fa.gz,fa.bz2,fasta,fasta.bgzf,fasta.gz,fasta.bz2,faa,faa.bgzf,faa.gz,faa.bz2,ffn,ffn.bgzf,ffn.gz,ffn.bz2,fna,fna.bgzf,fna.gz,fna.bz2,frn,frn.bgzf,frn.gz,frn.bz2,embl,embl.bgzf,embl.gz,embl.bz2,gbk,gbk.bgzf,gbk.gz,gbk.bz2,raw,raw.bgzf,raw.gz,raw.bz2" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="approximate" value="false" type="string" description="Select approximate barcode demultiplexing, allowing one mismatch." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="hardClip" value="false" type="string" description="Select hardClip option, clipping the first length(barcode) bases in any case." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="exclude" value="false" type="string" description="Exclude unidentified reads from further processing." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="adapters" value="" type="input-file" description="FastA file containing the two adapter sequences. The adapters according to the layout: 5&apos;-adapter1-read-adapter2-3&apos;." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fq.bz2,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fastq.bz2,*.fa,*.fa.bgzf,*.fa.gz,*.fa.bz2,*.fasta,*.fasta.bgzf,*.fasta.gz,*.fasta.bz2,*.faa,*.faa.bgzf,*.faa.gz,*.faa.bz2,*.ffn,*.ffn.bgzf,*.ffn.gz,*.ffn.bz2,*.fna,*.fna.bgzf,*.fna.gz,*.fna.bz2,*.frn,*.frn.bgzf,*.frn.gz,*.frn.bz2,*.embl,*.embl.bgzf,*.embl.gz,*.embl.bz2,*.gbk,*.gbk.bgzf,*.gbk.gz,*.gbk.bz2,*.raw,*.raw.bgzf,*.raw.gz,*.raw.bz2" required="false" advanced="false" />
+			<ITEM name="adapters-file-ext" value="" type="string" description="Override file extension for --adapters" restrictions="fq,fq.bgzf,fq.gz,fq.bz2,fastq,fastq.bgzf,fastq.gz,fastq.bz2,fa,fa.bgzf,fa.gz,fa.bz2,fasta,fasta.bgzf,fasta.gz,fasta.bz2,faa,faa.bgzf,faa.gz,faa.bz2,ffn,ffn.bgzf,ffn.gz,ffn.bz2,fna,fna.bgzf,fna.gz,fna.bz2,frn,frn.bgzf,frn.gz,frn.bz2,embl,embl.bgzf,embl.gz,embl.bz2,gbk,gbk.bgzf,gbk.gz,gbk.bz2,raw,raw.bgzf,raw.gz,raw.bz2" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="no-adapter" value="false" type="string" description="Trim adapters from paired-end reads without using reference adapters." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="no-paired" value="false" type="string" description="Trim paired-end input with single-end trimming method." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="errors" value="0" type="int" description="Allowed errors in adapter detection." required="false" advanced="false" />
+			<ITEM name="overlap" value="0" type="int" description="Minimum length of overlap for a significant adapter match." required="false" advanced="false" />
+			<ITEM name="quality" value="" type="int" description="Quality threshold for read trimming." restrictions="0:40" required="false" advanced="false" />
+			<ITEM name="length" value="1" type="int" description="Minimum read length after trimming. Shorter reads will be substituted by a single N or removed if the paired read is too short as well." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="method" value="WIN" type="string" description="Method for trimming reads." restrictions="WIN,BWA,TAIL" required="false" advanced="false" />
+			<ITEMLIST name="argument-0"  type="input-file" description="Either one (single-end) or two (paired-end) read files." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fq.bz2,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fastq.bz2,*.fa,*.fa.bgzf,*.fa.gz,*.fa.bz2,*.fasta,*.fasta.bgzf,*.fasta.gz,*.fasta.bz2,*.faa,*.faa.bgzf,*.faa.gz,*.faa.bz2,*.ffn,*.ffn.bgzf,*.ffn.gz,*.ffn.bz2,*.fna,*.fna.bgzf,*.fna.gz,*.fna.bz2,*.frn,*.frn.bgzf,*.frn.gz,*.frn.bz2,*.embl,*.embl.bgzf,*.embl.gz,*.embl.bz2,*.gbk,*.gbk.bgzf,*.gbk.gz,*.gbk.bz2,*.raw,*.raw.bgzf,*.raw.gz,*.raw.bz2" required="true" advanced="false" />
+		</NODE>
+	</PARAMETERS>
+</tool>

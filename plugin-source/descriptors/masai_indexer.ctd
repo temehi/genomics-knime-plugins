@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool name="MasaiIndexer" version="0.7.2 [394776e]" docurl="http://www.seqan.de" category="Read Mapping" >
+	<executableName>masai_indexer</executableName>
+	<description>Masai Indexer</description>
+	<manual>Masai is a fast and accurate read mapper based on approximate seeds and multiple backtracking.
+See http://www.seqan.de/projects/masai for more information.
+(c) Copyright 2011-2012 by Enrico Siragusa.
+</manual>
+	<cli>
+		<clielement optionIdentifier="--write-ctd-file-ext" isList="false">
+			<mapping referenceName="masai_indexer.write-ctd-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-1-file-ext" isList="false">
+			<mapping referenceName="masai_indexer.arg-1-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--index" isList="false">
+			<mapping referenceName="masai_indexer.index" />
+		</clielement>
+		<clielement optionIdentifier="--index-prefix" isList="false">
+			<mapping referenceName="masai_indexer.index-prefix" />
+		</clielement>
+		<clielement optionIdentifier="--tmp-folder" isList="false">
+			<mapping referenceName="masai_indexer.tmp-folder" />
+		</clielement>
+		<!-- Following clielements are arguments. You should consider providing a help text to ease understanding. -->
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="masai_indexer.argument-0" />
+		</clielement>
+	</cli>
+	<PARAMETERS version="1.6.2" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_6_2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="masai_indexer" description="Masai Indexer">
+			<ITEM name="write-ctd-file-ext" value="" type="string" description="Override file extension for --write-ctd" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-1-file-ext" value="" type="string" description="Override file extension for argument 1" restrictions="fasta,fa" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="index" value="sa" type="string" description="Select the genome index type." restrictions="esa,sa,qgram,fm" required="false" advanced="false" />
+			<ITEM name="index-prefix" value="" type="string" description="Specify an genome index prefix name.                                      Default: use the genome filename prefix." required="false" advanced="false" />
+			<ITEM name="tmp-folder" value="" type="string" description="Specify a huge temporary folder.                                      Default: use the genome folder." required="false" advanced="false" />
+			<ITEM name="argument-0" value="" type="input-file" description="" supported_formats="*.fasta,*.fa" required="true" advanced="false" />
+		</NODE>
+	</PARAMETERS>
+</tool>

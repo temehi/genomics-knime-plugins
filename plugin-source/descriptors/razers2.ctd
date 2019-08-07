@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool name="Razers2" version="2.5.1 [ff0da13]" docurl="http://www.seqan.de" category="Read Mapping" >
+	<executableName>razers2</executableName>
+	<description>Fast Read Mapping with Sensitivity Control</description>
+	<manual>RazerS 2 is a versatile full-sensitive read mapper based on a k-mer counting filter. It supports single and paired-end mapping, and optimally parametrizes the filter based on a user-defined minimal sensitivity. See http://www.seqan.de/projects/razers for more information.
+Input to RazerS 2 is a reference genome file and either one file with single-end reads or two files containing left or right mates of paired-end reads. Use - to read single-end reads from stdin.
+(c) Copyright 2009 by David Weese.
+</manual>
+	<cli>
+		<clielement optionIdentifier="--write-ctd-file-ext" isList="false">
+			<mapping referenceName="razers2.write-ctd-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-1-file-ext" isList="false">
+			<mapping referenceName="razers2.arg-1-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--arg-2-file-ext" isList="true">
+			<mapping referenceName="razers2.arg-2-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--forward" isList="false">
+			<mapping referenceName="razers2.forward" />
+		</clielement>
+		<clielement optionIdentifier="--reverse" isList="false">
+			<mapping referenceName="razers2.reverse" />
+		</clielement>
+		<clielement optionIdentifier="--percent-identity" isList="false">
+			<mapping referenceName="razers2.percent-identity" />
+		</clielement>
+		<clielement optionIdentifier="--recognition-rate" isList="false">
+			<mapping referenceName="razers2.recognition-rate" />
+		</clielement>
+		<clielement optionIdentifier="--param-dir" isList="false">
+			<mapping referenceName="razers2.param-dir" />
+		</clielement>
+		<clielement optionIdentifier="--indels" isList="false">
+			<mapping referenceName="razers2.indels" />
+		</clielement>
+		<clielement optionIdentifier="--library-length" isList="false">
+			<mapping referenceName="razers2.library-length" />
+		</clielement>
+		<clielement optionIdentifier="--library-error" isList="false">
+			<mapping referenceName="razers2.library-error" />
+		</clielement>
+		<clielement optionIdentifier="--max-hits" isList="false">
+			<mapping referenceName="razers2.max-hits" />
+		</clielement>
+		<clielement optionIdentifier="--unique" isList="false">
+			<mapping referenceName="razers2.unique" />
+		</clielement>
+		<clielement optionIdentifier="--trim-reads" isList="false">
+			<mapping referenceName="razers2.trim-reads" />
+		</clielement>
+		<clielement optionIdentifier="--output" isList="false">
+			<mapping referenceName="razers2.output" />
+		</clielement>
+		<clielement optionIdentifier="--output-file-ext" isList="false">
+			<mapping referenceName="razers2.output-file-ext" />
+		</clielement>
+		<clielement optionIdentifier="--verbose" isList="false">
+			<mapping referenceName="razers2.verbose" />
+		</clielement>
+		<clielement optionIdentifier="--vverbose" isList="false">
+			<mapping referenceName="razers2.vverbose" />
+		</clielement>
+		<clielement optionIdentifier="--alignment" isList="false">
+			<mapping referenceName="razers2.alignment" />
+		</clielement>
+		<clielement optionIdentifier="--purge-ambiguous" isList="false">
+			<mapping referenceName="razers2.purge-ambiguous" />
+		</clielement>
+		<clielement optionIdentifier="--distance-range" isList="false">
+			<mapping referenceName="razers2.distance-range" />
+		</clielement>
+		<clielement optionIdentifier="--genome-naming" isList="false">
+			<mapping referenceName="razers2.genome-naming" />
+		</clielement>
+		<clielement optionIdentifier="--read-naming" isList="false">
+			<mapping referenceName="razers2.read-naming" />
+		</clielement>
+		<clielement optionIdentifier="--sort-order" isList="false">
+			<mapping referenceName="razers2.sort-order" />
+		</clielement>
+		<clielement optionIdentifier="--position-format" isList="false">
+			<mapping referenceName="razers2.position-format" />
+		</clielement>
+		<clielement optionIdentifier="--dont-shrink-alignments" isList="false">
+			<mapping referenceName="razers2.dont-shrink-alignments" />
+		</clielement>
+		<clielement optionIdentifier="--shape" isList="false">
+			<mapping referenceName="razers2.shape" />
+		</clielement>
+		<clielement optionIdentifier="--threshold" isList="false">
+			<mapping referenceName="razers2.threshold" />
+		</clielement>
+		<clielement optionIdentifier="--overabundance-cut" isList="false">
+			<mapping referenceName="razers2.overabundance-cut" />
+		</clielement>
+		<clielement optionIdentifier="--repeat-length" isList="false">
+			<mapping referenceName="razers2.repeat-length" />
+		</clielement>
+		<clielement optionIdentifier="--taboo-length" isList="false">
+			<mapping referenceName="razers2.taboo-length" />
+		</clielement>
+		<clielement optionIdentifier="--low-memory" isList="false">
+			<mapping referenceName="razers2.low-memory" />
+		</clielement>
+		<clielement optionIdentifier="--match-N" isList="false">
+			<mapping referenceName="razers2.match-N" />
+		</clielement>
+		<clielement optionIdentifier="--error-distr" isList="false">
+			<mapping referenceName="razers2.error-distr" />
+		</clielement>
+		<!-- Following clielements are arguments. You should consider providing a help text to ease understanding. -->
+		<clielement optionIdentifier="" isList="false">
+			<mapping referenceName="razers2.argument-0" />
+		</clielement>
+		<clielement optionIdentifier="" isList="true">
+			<mapping referenceName="razers2.argument-1" />
+		</clielement>
+	</cli>
+	<PARAMETERS version="1.6.2" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_6_2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<NODE name="razers2" description="Fast Read Mapping with Sensitivity Control">
+			<ITEM name="write-ctd-file-ext" value="" type="string" description="Override file extension for --write-ctd" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="arg-1-file-ext" value="" type="string" description="Override file extension for argument 1" restrictions="fq,fq.bgzf,fq.gz,fastq,fastq.bgzf,fastq.gz,fa,fa.bgzf,fa.gz,fasta,fasta.bgzf,fasta.gz,faa,faa.bgzf,faa.gz,ffn,ffn.bgzf,ffn.gz,fna,fna.bgzf,fna.gz,frn,frn.bgzf,frn.gz,embl,embl.bgzf,embl.gz,gbk,gbk.bgzf,gbk.gz,raw,raw.bgzf,raw.gz" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEMLIST name="arg-2-file-ext" type="string" description="Override file extension for argument 2" restrictions="fq,fq.bgzf,fq.gz,fastq,fastq.bgzf,fastq.gz,fa,fa.bgzf,fa.gz,fasta,fasta.bgzf,fasta.gz,faa,faa.bgzf,faa.gz,ffn,ffn.bgzf,ffn.gz,fna,fna.bgzf,fna.gz,frn,frn.bgzf,frn.gz,embl,embl.bgzf,embl.gz,gbk,gbk.bgzf,gbk.gz,raw,raw.bgzf,raw.gz" required="false" advanced="true" tags="file-ext-override,gkn-ignore" >
+			</ITEMLIST>
+			<ITEM name="forward" value="false" type="string" description="Map reads only to forward strands." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="reverse" value="false" type="string" description="Map reads only to reverse strands." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="percent-identity" value="92" type="double" description="Percent identity threshold." restrictions="50:100" required="false" advanced="false" />
+			<ITEM name="recognition-rate" value="99" type="double" description="Percent recognition rate." restrictions="80:100" required="false" advanced="false" />
+			<ITEM name="param-dir" value="" type="string" description="Read user-computed parameter files in the directory &lt;DIR&gt;." required="false" advanced="false" />
+			<ITEM name="indels" value="false" type="string" description="Allow indels. Default: mismatches only." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="library-length" value="220" type="int" description="Paired-end library length." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="library-error" value="50" type="int" description="Paired-end library length tolerance." restrictions="0:" required="false" advanced="false" />
+			<ITEM name="max-hits" value="100" type="int" description="Output only &lt;NUM&gt; of the best hits." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="unique" value="false" type="string" description="Output only unique best matches (-m 1 -dr 0 -pa)." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="trim-reads" value="" type="int" description="Trim reads to given length. Default: off." restrictions="14:" required="false" advanced="false" />
+			<ITEM name="output" value="" type="output-file" description="Change output filename (use - to dump to stdout in razers format). Default: &lt;READS FILE&gt;.razers." supported_formats="*.razers,*.eland,*.fa,*.fasta,*.gff,*.sam,*.bam,*.afg" required="false" advanced="false" />
+			<ITEM name="output-file-ext" value="" type="string" description="Override file extension for --output" restrictions="razers,eland,fa,fasta,gff,sam,bam,afg" required="false" advanced="true" tags="file-ext-override,gkn-ignore" />
+			<ITEM name="verbose" value="false" type="string" description="Verbose mode." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="vverbose" value="false" type="string" description="Very verbose mode." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="alignment" value="false" type="string" description="Dump the alignment for each match (only razer or fasta format)." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="purge-ambiguous" value="false" type="string" description="Purge reads with more than &lt;max-hits&gt; best matches." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="distance-range" value="" type="int" description="Only consider matches with at most NUM more errors compared to the best. Default: output all." required="false" advanced="false" />
+			<ITEM name="genome-naming" value="0" type="int" description="Select how genomes are named (see Naming section below)." restrictions="0:1" required="false" advanced="false" />
+			<ITEM name="read-naming" value="0" type="int" description="Select how reads are named (see Naming section below)." restrictions="0:3" required="false" advanced="false" />
+			<ITEM name="sort-order" value="0" type="int" description="Select how matches are sorted (see Sorting section below)." restrictions="0:3" required="false" advanced="false" />
+			<ITEM name="position-format" value="0" type="int" description="Select begin/end position numbering (see Coordinate section below)." restrictions="0:1" required="false" advanced="false" />
+			<ITEM name="dont-shrink-alignments" value="false" type="string" description="Disable alignment shrinking in SAM.  This is required for generating a gold mapping for Rabema." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="shape" value="11111111111" type="string" description="Manually set k-mer shape." required="false" advanced="false" />
+			<ITEM name="threshold" value="" type="int" description="Manually set minimum k-mer count threshold." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="overabundance-cut" value="" type="int" description="Set k-mer overabundance cut ratio." restrictions="0:1" required="false" advanced="false" />
+			<ITEM name="repeat-length" value="1000" type="int" description="Skip simple-repeats of length &lt;NUM&gt;." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="taboo-length" value="1" type="int" description="Set taboo length." restrictions="1:" required="false" advanced="false" />
+			<ITEM name="low-memory" value="false" type="string" description="Decrease memory usage at the expense of runtime." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="match-N" value="false" type="string" description="N matches all other characters. Default: N matches nothing." restrictions="true,false" required="false" advanced="false" />
+			<ITEM name="error-distr" value="" type="string" description="Write error distribution to FILE." required="false" advanced="false" />
+			<ITEM name="argument-0" value="" type="input-file" description="A reference genome file." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fa,*.fa.bgzf,*.fa.gz,*.fasta,*.fasta.bgzf,*.fasta.gz,*.faa,*.faa.bgzf,*.faa.gz,*.ffn,*.ffn.bgzf,*.ffn.gz,*.fna,*.fna.bgzf,*.fna.gz,*.frn,*.frn.bgzf,*.frn.gz,*.embl,*.embl.bgzf,*.embl.gz,*.gbk,*.gbk.bgzf,*.gbk.gz,*.raw,*.raw.bgzf,*.raw.gz" required="true" advanced="false" />
+			<ITEMLIST name="argument-1"  type="input-file" description="Either one (single-end) or two (paired-end) read files." supported_formats="*.fq,*.fq.bgzf,*.fq.gz,*.fastq,*.fastq.bgzf,*.fastq.gz,*.fa,*.fa.bgzf,*.fa.gz,*.fasta,*.fasta.bgzf,*.fasta.gz,*.faa,*.faa.bgzf,*.faa.gz,*.ffn,*.ffn.bgzf,*.ffn.gz,*.fna,*.fna.bgzf,*.fna.gz,*.frn,*.frn.bgzf,*.frn.gz,*.embl,*.embl.bgzf,*.embl.gz,*.gbk,*.gbk.bgzf,*.gbk.gz,*.raw,*.raw.bgzf,*.raw.gz" required="true" advanced="false" />
+		</NODE>
+	</PARAMETERS>
+</tool>
